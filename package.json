@@ -30,6 +30,7 @@
     "webpack": "^1.6.0"
   },
   "dependencies": {
-    "babel-runtime": "^4.6.1"
+    "babel-runtime": "^4.6.1",
+    "react-jsx-anywhere": "^0.1.1"
   }
 }

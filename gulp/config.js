@@ -30,7 +30,7 @@ module.exports = {
             loaders: [{
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader?experimental&optional=selfContained' // パラメータ渡す
+                loaders: ['babel-loader?experimental&optional=selfContained', 'react-jsx-anywhere/webpack'] // パラメータ渡す
             }]
         }
     },
