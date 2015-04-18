@@ -3,6 +3,7 @@ var path = require('path');
 var dest = './build';
 var src = './src';
 var relativeSrcPath = path.relative('.', src);
+var BowerWebpackPlugin = require('bower-webpack-plugin');
 
 module.exports = {
     dest: dest,
@@ -32,7 +33,16 @@ module.exports = {
                 exclude: /node_modules/,
                 loaders: ['babel-loader?experimental&optional=selfContained', 'react-jsx-anywhere/webpack'] // パラメータ渡す
             }]
-        }
+        },
+        plugins: [
+          new BowerWebpackPlugin({
+            modulesDirectories: ["bower_components"],
+            manifestFiles:      "bower.json",
+            includes:           /.*/,
+            excludes:           [],
+            searchResolveModulesDirectories: true
+          })
+        ]
     },
 
     stylus: {
