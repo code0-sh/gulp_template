@@ -17,6 +17,13 @@ module.exports = {
     jade: {
         src: src + '/jade/**.jade',
         dest: dest + '/',
+        options: {pretty: true}
+    },
+
+    imagemin: {
+        src: src + '/images/*.+(jpg|jpeg|png|gif|svg)',
+        dest: dest + '/images',
+        options: {optimizationLevel: 7}
     },
 
     webpack: {
@@ -27,7 +34,7 @@ module.exports = {
         resolve: {
             extensions: ['', '.js']
         },
-        module: { // ここを追記
+        module: {
             loaders: [{
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -60,6 +67,8 @@ module.exports = {
     watch: {
         js: relativeSrcPath + '/js/**',
         styl: relativeSrcPath + '/styl/**',
-        jade: relativeSrcPath + '/jade/**'
+        jade: relativeSrcPath + '/jade/**',
+        md: relativeSrcPath + '/md/**',
+        imagemin: relativeSrcPath + '/images/**'
     }
 }

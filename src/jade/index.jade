@@ -18,7 +18,12 @@ html
 
         li.menu-list
           a(href='http://learnboost.github.io/stylus/', title='stylus') stylus
+
+    pre.prettyprint
+      include:markdown ../md/sample.md
+    
     div#react
 
-    script(src='http://fb.me/react-with-addons-0.13.1.js')
+    script(src='//fb.me/react-with-addons-0.13.1.js')
+    script(src='//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js')
     script(src='js/bundle.js')
