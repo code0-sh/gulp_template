@@ -1,14 +1,16 @@
 'use strict';
 
-var d3 = require('d3');
-console.log(d3);
+// import Hello from './components/Hello.js';
 
-import Hello from './components/Hello.js';
+// var hello = new Hello('Hello');
 
-var hello = new Hello('Hello');
+// hello.say();
+// hello.later().then(() => hello.say());
 
-hello.say();
-hello.later().then(() => hello.say());
+import Rectangle from './components/Rectangle.js';
+
+let rectangle = new Rectangle(1.0);
+console.log(rectangle.width);
 
 var HelloReact = React.createClass({
   render() {
