@@ -1,4 +1,7 @@
 'use strict';
+/*global React*/
+/*global document*/
+/* eslint-disable no-console */
 
 // import Hello from './components/Hello.js';
 
@@ -9,7 +12,7 @@
 
 import Rectangle from './components/Rectangle.js';
 
-let rectangle = new Rectangle(1.0);
+let rectangle = new Rectangle(10, 20);
 console.log(rectangle.width);
 
 var HelloReact = React.createClass({
@@ -20,4 +23,4 @@ var HelloReact = React.createClass({
   }
 });
 
-React.render(<HelloReact name="React" />, document.getElementById("react"));
+React.render(<HelloReact name="React" />, document.getElementById('react'));
